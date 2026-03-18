@@ -1,0 +1,107 @@
+/* Estilos para la Invitación de Rodny & Yariela */
+:root {
+    --verde-oliva: #777e68;
+    --crema: #fdfcf8;
+    --texto-oscuro: #3d405b;
+    --rojo: #d80000;
+    
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdfcf8;
+    font-family: 'Helvetica', serif;
+    color: var(--texto-oscuro);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: var(--crema);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.w-leaf {
+    position: absolute;
+    width: 150px;
+    opacity: 0.8;
+    z-index: 1;
+}
+.w-leaf-top { top: -20px; right: -30px; transform: rotate(-20deg); }
+.w-leaf-bottom { bottom: -40px; left: -30px; transform: rotate(160deg); }
+
+.header {
+    background-color: var(--verde-oliva);
+    color: white;
+    padding: 80px 20px 60px 20px;
+    position: relative;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+}
+
+h1 { font-family: 'Great Vibes', cursive; font-size: 3.5rem; margin: 0; font-weight: normal;}
+.fecha-top { letter-spacing: 5px; font-weight: 300; margin-top: 15px; font-size: 1.1rem;}
+
+.countdown-section {
+    background-color: var(--verde-oliva);
+    color: white;
+    padding: 25px 10px;
+    margin: 30px 20px;
+    border-radius: 8px;
+}
+
+.timer { display: flex; justify-content: space-around; font-size: 1.8rem; font-weight: 600; }
+.timer span { display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 300; }
+
+.calendar {
+    padding: 25px 15px;
+    margin: 30px 20px;
+    border: 4px solid rgba(119, 126, 104, 0.801);
+    border-radius: 10% 10% 10% 10%
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.agosto-1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.agosto-1::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid var(--verde-oliva);
+    border-radius: 48% 52% 50% 50% / 40% 55% 45% 60%;
+    transform: rotate(-3deg);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--verde-oliva);
+    color: rgb(233, 225, 225);
+    padding: 14px 25px;
+    text-decoration: none;
+    margin: 15px 0;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.final-phrase {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: var(--verde-oliva);
+    margin: 40px 0;
+}

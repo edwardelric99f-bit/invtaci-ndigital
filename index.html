@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Rodny & Yariela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <svg class="w-leaf w-leaf-top" viewBox="0 0 100 100"><path d="M50 10 C30 30, 10 60, 50 90 C90 60, 70 30, 50 10 Z" fill="#777e68" opacity="0.3"/></svg>
+        <svg class="w-leaf w-leaf-bottom" viewBox="0 0 100 100"><path d="M50 10 C30 30, 10 60, 50 90 C90 60, 70 30, 50 10 Z" fill="#777e68" opacity="0.3"/></svg>
+
+        <header class="header">
+            <h1>Rodny <span class="sep">&</span> Yariela</h1>
+            <div class="fecha-top">01 . 08 . 2026</div>
+        </header>
+
+        <div class="content">
+            <div class="countdown-section">
+                <p>Faltan</p>
+                <div id="countdown" class="timer">
+                    <div>00 <br><span>Días</span></div>
+                    <div>00 <br><span>Hrs</span></div>
+                    <div>00 <br><span>Min</span></div>
+                    <div>00 <br><span>Seg</span></div>
+                </div>
+            </div>
+
+            <section>
+                <h3>Ceremonia & Recepción</h3>
+                <p>3:00 PM</p>
+                <a href="https://waze.com/ul?ll=9.864,-83.919&navigate=yes" class="btn" target="_blank">Abrir en Waze</a>
+            </section>
+
+            <div class="calendar">
+                <h4>Agosto 2026</h4>
+                <div class="calendar-grid">
+                    <span class="day-name">L</span><span class="day-name">M</span><span class="day-name">M</span><span class="day-name">J</span><span class="day-name">V</span><span class="day-name">S</span><span class="day-name">D</span>
+                    <span></span><span></span><span></span><span></span><span></span><span class="agosto-1">1</span><span>2</span>
+                    <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+                    <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+                    <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+                </div>
+            </div>
+
+            <section style="margin-top: 40px;">
+                <h3>Confirmación</h3>
+                <p>Agradecemos confirmar antes del 15 de julio.</p>
+                <a href="https://wa.me/50685135839?text=Hola!%20Confirmo%20asistencia" class="btn btn-confirm" target="_blank">Confirmar WhatsApp</a>
+            </section>
+
+            <div class="final-phrase">Muchas Gracias!</div>
+        </div>
+    </div>
+
+    <script>
+        const eventDate = new Date('August 1, 2026 15:00:00').getTime();
+        setInterval(function() {
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById('countdown').innerHTML = 
+                `<div>${days} <br><span>Días</span></div>
+                 <div>${hours} <br><span>Hrs</span></div>
+                 <div>${mins} <br><span>Min</span></div>
+                 <div>${secs} <br><span>Seg</span></div>`;
+        }, 1000);
+    </script>
+</body>
+</html>
